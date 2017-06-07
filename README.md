@@ -1,5 +1,12 @@
+## Note: This project is not actively maintained
+
+If you are looking for a javscript-only bcrypt implementation we recommend you use [bcrypt.js](https://github.com/dcodeIO/bcrypt.js), which is based on bcrypt-nodejs.
+
+
 # bcrypt-nodejs
 ===========================================
+
+[![Join the chat at https://gitter.im/shaneGirish/bcrypt-nodejs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/shaneGirish/bcrypt-nodejs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://secure.travis-ci.org/shaneGirish/bcrypt-nodejs.png)](http://travis-ci.org/shaneGirish/bcrypt-nodejs)
 [![Dependency Status](https://david-dm.org/shaneGirish/bcrypt-nodejs.png)](https://david-dm.org/shaneGirish/bcrypt-nodejs)
 
@@ -16,8 +23,15 @@ Basically, to deploy one of my apps which uses [node.bcrypt.js] on a winx64 plat
 This code is based on [javascript-bcrypt] and uses [crypto] to create random byte arrays.
 
 ## Basic usage:
+
+Installing the Package
+
+`npm install bcrypt-nodejs`
+or
+`yarn add bcrypt-nodejs`
+
 Synchronous
-```
+```javascript
 var hash = bcrypt.hashSync("bacon");
 
 bcrypt.compareSync("bacon", hash); // true
@@ -25,7 +39,7 @@ bcrypt.compareSync("veggies", hash); // false
 ```
 
 Asynchronous
-```
+```javascript
 bcrypt.hash("bacon", null, null, function(err, hash) {
   // Store hash in your password DB.
 });
@@ -83,7 +97,7 @@ I heavily reused code from [javascript-bcrypt]. Though "Clipperz Javascript Cryp
 
 [crypto]:(http://nodejs.org/api/crypto.html)
 [node.bcrypt.js]:https://github.com/ncb000gt/node.bcrypt.js.git
-[javascript-bcrypt]:http://code.google.com/p/javascript-bcrypt/
+[javascript-bcrypt]:https://github.com/nevins-b/javascript-bcrypt
 
 [alexmurray]:https://github.com/alexmurray
 [NicolasPelletier]:https://github.com/NicolasPelletier
